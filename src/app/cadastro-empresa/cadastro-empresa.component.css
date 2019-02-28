@@ -1,0 +1,28 @@
+.card-login {
+  width: 400px;
+}
+:host {
+  display: flex;
+  min-height: 100vh;
+}
+
+mat-card {
+  margin: auto;
+  text-align: center;
+}
+
+
+.login-full-width {
+  width: 100%;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.example-form-field {
+  width: 200px;
+}
+

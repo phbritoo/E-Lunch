@@ -1,0 +1,90 @@
+<mat-card class="card-login">
+  <mat-card-header>
+    <mat-card-title class="card-login title"><b> Cadastro E-Lunch </b></mat-card-title>
+
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <table class="login-full-width" cellspacing="0">
+
+        <tr>
+          <td>
+            <mat-form-field class="login-full-width">
+              <input matInput placeholder="Nome completo"  name="cliente_nome" [(ngModel)]="nome" required>
+              <button mat-button *ngIf="nome" matSuffix mat-icon-button aria-label="Limpar" (click)="nome=''">
+                <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="login-full-width">
+              <input matInput placeholder="Telefone"  type="tel" name="cliente_tel" [(ngModel)]="tel" required>
+              <button mat-button *ngIf="tel" matSuffix mat-icon-button aria-label="Limpar" (click)="tel=''">
+                <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="login-full-width">
+              <input matInput placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="email" required>
+              <button mat-button *ngIf="email" matSuffix mat-icon-button aria-label="Limpar" (click)="email=''">
+                <mat-icon>close</mat-icon>
+                </button>
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Por favor insira um e-mail correto
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email  <strong>incorreto</strong>
+              </mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="login-full-width">
+              <input matInput placeholder="Departamento/Andar"  name="cliente_dpt" [(ngModel)]="andar" required>
+              <button mat-button *ngIf="andar" matSuffix mat-icon-button aria-label="Limpar" (click)="andar=''">
+                <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <mat-form-field class="login-full-width">
+                      <mat-select placeholder="Qual Empresa? "  required>
+                        <mat-option>--</mat-option>
+                        <mat-option >
+
+                        </mat-option>
+                      </mat-select>
+                      <mat-error >Erro</mat-error>
+                      <mat-hint></mat-hint>
+                </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="login-full-width">
+              <input matInput placeholder="Senha"  type="password" name="password"[(ngModel)]="senha" required>
+              <button mat-button *ngIf="senha" matSuffix mat-icon-button aria-label="Limpar" (click)="senha=''">
+                <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions class="example-button-row">
+    <button mat-raised-button color="primary">Efetuar Cadastro</button>
+    <button mat-raised-button color="basic">Voltar</button>
+  </mat-card-actions>
+</mat-card>
+
+
+

@@ -9,37 +9,44 @@
         <tr>
           <td>
               <mat-form-field class="login-full-width">
-                      <mat-select placeholder="Funcionário ou Cliente? "  required>
+                      <mat-select placeholder="Funcionário ou Cliente? " [formControl]="loginControl" required>
                         <mat-option>--</mat-option>
-                        <mat-option >
-
-                        </mat-option>
+                        <mat-option *ngFor="let login of login" [value]="login">
+                            {{login.name}}
+                          </mat-option>
                       </mat-select>
-                      <mat-error >Please choose an animal</mat-error>
-                      <mat-hint></mat-hint>
+                      <mat-error *ngIf="loginControl.hasError('required')">Por favor definir se é cliente ou não</mat-error>
+                      <mat-hint>{{loginControl.value?.sound}}</mat-hint>
                 </mat-form-field>
           </td>
         </tr>
         <tr>
           <td>
             <mat-form-field class="login-full-width">
-              <input matInput placeholder="Usuário"  name="username" required>
+              <input matInput placeholder="Usuário"  name="username"  [(ngModel)]="usuario" required>
+              <button mat-button *ngIf="usuario" matSuffix mat-icon-button aria-label="Limpar" (click)="usuario=''">
+                  <mat-icon>close</mat-icon>
+              </button>
             </mat-form-field>
           </td>
         </tr>
         <tr>
           <td>
             <mat-form-field class="login-full-width">
-              <input matInput placeholder="Senha"  type="password" name="password" required>
+              <input matInput placeholder="Senha"  type="password" name="password" [(ngModel)]="senha" required>
+              <button mat-button *ngIf="senha" matSuffix mat-icon-button aria-label="Limpar" (click)="senha=''">
+                  <mat-icon>close</mat-icon>
+              </button>
             </mat-form-field>
           </td>
         </tr>
       </table>
     </form>
+    <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
   </mat-card-content>
   <mat-card-actions class="example-button-row">
     <button mat-raised-button color="primary">Login</button>
-    <button mat-raised-button color="accent">Cadastre-se</button>
+    <button mat-raised-button color="basic">Cadastre-se</button>
   </mat-card-actions>
 </mat-card>
 

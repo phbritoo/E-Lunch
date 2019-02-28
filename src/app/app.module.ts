@@ -12,11 +12,21 @@ import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
+import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CadastroEmpresaComponent } from './cadastro-empresa/cadastro-empresa.component';
+import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroClienteComponent,
+    CadastroEmpresaComponent,
+    CadastroFuncionarioComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +39,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
