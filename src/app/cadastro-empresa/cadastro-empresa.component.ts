@@ -9,6 +9,14 @@ export class CadastroEmpresaComponent implements OnInit {
   // botao de limpar
   nome = '';
   endereco = '';
+  andar = '';
+  cep = '';
+  numero = '';
+  uf = '';
+  cidade = '';
+  bairro = '';
+  unidade = '';
+
 
   constructor() { }
 

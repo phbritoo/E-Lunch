@@ -1,7 +1,6 @@
 <mat-card class="card-login">
     <mat-card-header>
-      <mat-card-title class="card-login title"><b>Cadastrar Funcionário </b></mat-card-title>
-
+      <mat-card-title class="card-login title"><b> Cadastro Funcionário E-Lunch </b></mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <form>
@@ -10,8 +9,28 @@
           <tr>
             <td>
               <mat-form-field class="login-full-width">
-                <input matInput placeholder="Nome do funcionario"  name="func_nome" [(ngModel)]="nome" required>
+                <input matInput placeholder="Nome completo"  name="user_nome" [(ngModel)]="nome" required>
                 <button mat-button *ngIf="nome" matSuffix mat-icon-button aria-label="Limpar" (click)="nome=''">
+                  <mat-icon>close</mat-icon>
+                  </button>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                <mat-form-field class="login-full-width">
+                  <input matInput placeholder="CPF"  name="user_cpf" [(ngModel)]="cpf" required>
+                  <button mat-button *ngIf="cpf" matSuffix mat-icon-button aria-label="Limpar" (click)="cpf=''">
+                    <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+              </td>
+            </tr>
+          <tr>
+            <td>
+              <mat-form-field class="login-full-width">
+                <input matInput placeholder="Telefone"  type="tel" name="cliente_tel" [(ngModel)]="tel" required>
+                <button mat-button *ngIf="tel" matSuffix mat-icon-button aria-label="Limpar" (click)="tel=''">
                   <mat-icon>close</mat-icon>
                   </button>
               </mat-form-field>
@@ -20,7 +39,7 @@
           <tr>
             <td>
               <mat-form-field class="login-full-width">
-                <input matInput placeholder="Email" name="func_email" [formControl]="emailFormControl" [(ngModel)]="email" required>
+                <input matInput placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="email" required>
                 <button mat-button *ngIf="email" matSuffix mat-icon-button aria-label="Limpar" (click)="email=''">
                   <mat-icon>close</mat-icon>
                   </button>
@@ -34,19 +53,9 @@
             </td>
           </tr>
           <tr>
-            <td>
-                <mat-form-field class="login-full-width">
-                    <input matInput placeholder="Telefone"  type="tel" name="func_tel" [(ngModel)]="tel" required>
-                    <button mat-button *ngIf="tel" matSuffix mat-icon-button aria-label="Limpar" (click)="tel=''">
-                      <mat-icon>close</mat-icon>
-                      </button>
-                  </mat-form-field>
-            </td>
-          </tr>
-          <tr>
               <td>
                 <mat-form-field class="login-full-width">
-                  <input matInput placeholder="Login"  name="func_login" [(ngModel)]="login" required>
+                  <input matInput placeholder="Login"  name="user_login" [(ngModel)]="login" required>
                   <button mat-button *ngIf="login" matSuffix mat-icon-button aria-label="Limpar" (click)="login=''">
                     <mat-icon>close</mat-icon>
                     </button>
@@ -56,7 +65,7 @@
           <tr>
             <td>
               <mat-form-field class="login-full-width">
-                <input matInput placeholder="Senha"  name="func_senha" type="password" name="password"[(ngModel)]="senha" required>
+                <input matInput placeholder="Senha"  type="password" name="password"[(ngModel)]="senha" required>
                 <button mat-button *ngIf="senha" matSuffix mat-icon-button aria-label="Limpar" (click)="senha=''">
                   <mat-icon>close</mat-icon>
                   </button>
@@ -64,13 +73,11 @@
             </td>
           </tr>
         </table>
+        <mat-card-actions class="example-button-row">
+            <button mat-raised-button color="primary">Cadastrar Funcionário</button>
+            <button mat-raised-button color="basic">Voltar</button>
+        </mat-card-actions>
+        <input type="hidden" value="flag2">
       </form>
     </mat-card-content>
-    <mat-card-actions class="example-button-row">
-      <button mat-raised-button color="primary">Cadastrar Funcionario</button>
-      <button mat-raised-button color="basic">Voltar</button>
-    </mat-card-actions>
   </mat-card>
-
-
-

@@ -19,6 +19,7 @@ export class CadastroFuncionarioComponent implements OnInit {
   email = '';
   login = '';
   senha = '';
+  cpf = '';
 
   constructor() { }
 

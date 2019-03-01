@@ -5,13 +5,10 @@
   display: flex;
   min-height: 100vh;
 }
-
 mat-card {
   margin: auto;
   text-align: center;
 }
-
-
 .login-full-width {
   width: 100%;
 }

@@ -1,7 +1,6 @@
 <mat-card class="card-login">
   <mat-card-header>
     <mat-card-title class="card-login title"><b> Cadastro E-Lunch </b></mat-card-title>
-
   </mat-card-header>
   <mat-card-content>
     <form>
@@ -10,13 +9,23 @@
         <tr>
           <td>
             <mat-form-field class="login-full-width">
-              <input matInput placeholder="Nome completo"  name="cliente_nome" [(ngModel)]="nome" required>
+              <input matInput placeholder="Nome completo"  name="user_nome" [(ngModel)]="nome" required>
               <button mat-button *ngIf="nome" matSuffix mat-icon-button aria-label="Limpar" (click)="nome=''">
                 <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>
           </td>
         </tr>
+        <tr>
+            <td>
+              <mat-form-field class="login-full-width">
+                <input matInput placeholder="CPF"  name="user_cpf" [(ngModel)]="cpf" required>
+                <button mat-button *ngIf="cpf" matSuffix mat-icon-button aria-label="Limpar" (click)="cpf=''">
+                  <mat-icon>close</mat-icon>
+                  </button>
+              </mat-form-field>
+            </td>
+          </tr>
         <tr>
           <td>
             <mat-form-field class="login-full-width">
@@ -45,16 +54,6 @@
         </tr>
         <tr>
           <td>
-            <mat-form-field class="login-full-width">
-              <input matInput placeholder="Departamento/Andar"  name="cliente_dpt" [(ngModel)]="andar" required>
-              <button mat-button *ngIf="andar" matSuffix mat-icon-button aria-label="Limpar" (click)="andar=''">
-                <mat-icon>close</mat-icon>
-                </button>
-            </mat-form-field>
-          </td>
-        </tr>
-        <tr>
-          <td>
               <mat-form-field class="login-full-width">
                       <mat-select placeholder="Qual Empresa? "  required>
                         <mat-option>--</mat-option>
@@ -68,6 +67,44 @@
           </td>
         </tr>
         <tr>
+            <td>
+                <mat-form-field class="login-full-width">
+                        <mat-select placeholder="Qual Unidade? "  required>
+                          <mat-option>--</mat-option>
+                          <mat-option >
+
+                          </mat-option>
+                        </mat-select>
+                        <mat-error >Erro</mat-error>
+                        <mat-hint></mat-hint>
+                  </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                  <mat-form-field class="login-full-width">
+                          <mat-select placeholder="Qual Andar? "  required>
+                            <mat-option>--</mat-option>
+                            <mat-option >
+
+                            </mat-option>
+                          </mat-select>
+                          <mat-error >Erro</mat-error>
+                          <mat-hint></mat-hint>
+                    </mat-form-field>
+              </td>
+            </tr>
+        <tr>
+            <td>
+              <mat-form-field class="login-full-width">
+                <input matInput placeholder="Login"  name="user_login" [(ngModel)]="login" required>
+                <button mat-button *ngIf="login" matSuffix mat-icon-button aria-label="Limpar" (click)="login=''">
+                  <mat-icon>close</mat-icon>
+                  </button>
+              </mat-form-field>
+            </td>
+          </tr>
+        <tr>
           <td>
             <mat-form-field class="login-full-width">
               <input matInput placeholder="Senha"  type="password" name="password"[(ngModel)]="senha" required>
@@ -78,13 +115,11 @@
           </td>
         </tr>
       </table>
+      <mat-card-actions class="example-button-row">
+          <button mat-raised-button color="primary">Efetuar Cadastro</button>
+          <button mat-raised-button color="basic">Voltar</button>
+      </mat-card-actions>
+      <input type="hidden" value="flag1">
     </form>
   </mat-card-content>
-  <mat-card-actions class="example-button-row">
-    <button mat-raised-button color="primary">Efetuar Cadastro</button>
-    <button mat-raised-button color="basic">Voltar</button>
-  </mat-card-actions>
 </mat-card>
-
-
-

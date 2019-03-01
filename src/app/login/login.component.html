@@ -1,4 +1,7 @@
+
+
 <mat-card class="card-login">
+    <app-menu></app-menu>
   <mat-card-header>
     <mat-card-title class="card-login title"><b> LOGIN </b></mat-card-title>
 
@@ -6,20 +9,6 @@
   <mat-card-content>
     <form>
       <table class="login-full-width" cellspacing="0">
-        <tr>
-          <td>
-              <mat-form-field class="login-full-width">
-                      <mat-select placeholder="Funcionário ou Cliente? " [formControl]="loginControl" required>
-                        <mat-option>--</mat-option>
-                        <mat-option *ngFor="let login of login" [value]="login">
-                            {{login.name}}
-                          </mat-option>
-                      </mat-select>
-                      <mat-error *ngIf="loginControl.hasError('required')">Por favor definir se é cliente ou não</mat-error>
-                      <mat-hint>{{loginControl.value?.sound}}</mat-hint>
-                </mat-form-field>
-          </td>
-        </tr>
         <tr>
           <td>
             <mat-form-field class="login-full-width">
@@ -45,8 +34,8 @@
     <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
   </mat-card-content>
   <mat-card-actions class="example-button-row">
-    <button mat-raised-button color="primary">Login</button>
-    <button mat-raised-button color="basic">Cadastre-se</button>
+    <button mat-raised-button color="primary" [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Login</button>
+    <button mat-raised-button color="basic" [routerLink]="['/cadastroCliente']" routerLinkActive="router-link-active" >Cadastre-se</button>
   </mat-card-actions>
 </mat-card>
 
