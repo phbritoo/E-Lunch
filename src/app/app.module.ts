@@ -16,11 +16,19 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CadastroEmpresaComponent } from './cadastro-empresa/cadastro-empresa.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
-import { MenuComponent } from './menu/menu.component';
-import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule} from '@angular/material';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatRadioModule} from '@angular/material/radio';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatListModule } from '@angular/material';
+import { ListarFuncionarioComponent } from './listar-funcionario/listar-funcionario.component';
+import { ListarEmpresaComponent } from './listar-empresa/listar-empresa.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { HeaderComponent } from './header/header.component';
+import { BarraLateralComponent } from './header/barra-lateral/barra-lateral.component';
+import { ListarClientesComponent } from './listar-clientes/listar-clientes.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +37,11 @@ import {MatRadioModule} from '@angular/material/radio';
     CadastroClienteComponent,
     CadastroEmpresaComponent,
     CadastroFuncionarioComponent,
-    MenuComponent
+    ListarFuncionarioComponent,
+    ListarEmpresaComponent,
+    HeaderComponent,
+    BarraLateralComponent,
+    ListarClientesComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +62,11 @@ import {MatRadioModule} from '@angular/material/radio';
     MatSidenavModule,
     MatTabsModule,
     MatRadioModule,
+    LayoutModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

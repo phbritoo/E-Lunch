@@ -1,13 +1,9 @@
 .card-login {
   width: 300px;
+  margin-top: 10%
 }
-:host {
-  display: flex;
-  min-height: 100vh;
-}
-
 mat-card {
-  margin: auto;
+margin: auto;
   text-align: center;
 }
 
@@ -22,5 +18,6 @@ mat-card {
   margin-bottom: 20px;
   text-align: center;
 }
+
 
 

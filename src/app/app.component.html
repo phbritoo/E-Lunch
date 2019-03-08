@@ -1,13 +1,15 @@
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <span> E-Lunch - Delivery de Almoço</span>
-        <span class="span-title">
-        <button mat-button [routerLink]="['/login']" routerLinkActive="router-link-active" > Login </button>
-        <button mat-button [routerLink]="['/cadastroCliente']" routerLinkActive="router-link-active" > Cadastrar Cliente </button>
-        <button mat-button [routerLink]="['/cadastroFuncionario']" routerLinkActive="router-link-active" > Cadastrar Funcionario </button>
-        <button mat-button [routerLink]="['/cadastroEmpresa']" routerLinkActive="router-link-active" > Cadastrar Empresa </button>
-        <button mat-button [routerLink]="['/']" routerLinkActive="router-link-active" > Cadastrar Cadarpio </button>
-      </span>
-      </mat-toolbar-row>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
+<!-- Menu que está na pasta "header" e dentro tem a pasta "barra-lateral" -->
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <app-barra-lateral (sidenavClose)="sidenav.close()"></app-barra-lateral>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </mat-sidenav-content>
+
+ </mat-sidenav-container>
