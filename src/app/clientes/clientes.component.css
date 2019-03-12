@@ -10,3 +10,9 @@ table {
 td, th {
   width: 25%;
 }
+.filtro{
+  width: 50%;
+}
+.botao{
+  width: 2%;
+}

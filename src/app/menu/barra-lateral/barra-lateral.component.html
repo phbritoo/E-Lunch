@@ -10,23 +10,27 @@
   </a>
 
   <a mat-list-item  (click)="onSidenavClose()"  [routerLink]="['/listarFuncionarios']" routerLinkActive="router-link-active" >
-      <mat-icon>account_balance</mat-icon>
-      <span class="nav-caption"> Listar Funcionario </span>
+      <mat-icon>face</mat-icon>
+      <span class="nav-caption"> Funcionários </span>
   </a>
   <a mat-list-item (click)="onSidenavClose()" [routerLink]="['/listarClientes']" routerLinkActive="router-link-active" >
-      <mat-icon>done_outline</mat-icon>
-      <span class="nav-caption" > Listar Clientes </span>
+      <mat-icon>list</mat-icon>
+      <span class="nav-caption" > Clientes </span>
   </a>
   <a mat-list-item (click)="onSidenavClose()" [routerLink]="['/listarEmpresas']" routerLinkActive="router-link-active" >
-      <mat-icon>camera_enhance</mat-icon>
-      <span class="nav-caption" > Listar Empresas </span>
+      <mat-icon>list</mat-icon>
+      <span class="nav-caption" > Empresas </span>
   </a>
-  <a mat-list-item  (click)="onSidenavClose()"  [routerLink]="['/sair']" routerLinkActive="router-link-active" >
+  <a mat-list-item (click)="onSidenavClose()" [routerLink]="['/']" routerLinkActive="router-link-active" >
+    <mat-icon>restaurant</mat-icon>
+    <span class="nav-caption" > Cardapio </span>
+</a>
+  <!-- <a mat-list-item  (click)="onSidenavClose()"  [routerLink]="['/sair']" routerLinkActive="router-link-active" >
       <mat-icon>favorite</mat-icon>
       <span class="nav-caption"> Sair </span>
-  </a>
+  </a> -->
 
-  <mat-list-item [matMenuTriggerFor]="menu">
+  <!-- <mat-list-item [matMenuTriggerFor]="menu">
       <mat-icon>unfold_more</mat-icon>
       <a matline>Cadastro</a>
   </mat-list-item>
@@ -34,7 +38,7 @@
     <button mat-menu-item (click)="onSidenavClose()"[routerLink]="['/cadastroFuncionario']" routerLinkActive="router-link-active" > Cadastrar Funcionario </button>
     <button mat-menu-item (click)="onSidenavClose()"[routerLink]="['/cadastroEmpresa']" routerLinkActive="router-link-active" > Cadastrar Empresa</button>
     <button mat-menu-item (click)="onSidenavClose()"[routerLink]="['/cadastroCliente']" routerLinkActive="router-link-active" > Cadastrar Cliente </button>
-  </mat-menu>
+  </mat-menu> -->
 
 
 </mat-nav-list>

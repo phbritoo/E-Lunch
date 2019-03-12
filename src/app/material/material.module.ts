@@ -25,7 +25,8 @@ import * as Material from '@angular/material';
     Material.MatTabsModule,
     Material.MatTableModule,
     Material.MatListModule,
-    Material.MatMenuModule
+    Material.MatMenuModule,
+    Material.MatDialogModule
   ],
   exports:[
     Material.MatGridListModule,
@@ -47,7 +48,8 @@ import * as Material from '@angular/material';
     Material.MatTabsModule,
     Material.MatTableModule,
     Material.MatListModule,
-    Material.MatMenuModule
+    Material.MatMenuModule,
+    Material.MatDialogModule
   ]
 })
 export class MaterialModule { }

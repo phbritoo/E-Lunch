@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-adicionar-cliente',
@@ -21,7 +22,16 @@ export class AdicionarClienteComponent implements OnInit {
   senha = '';
   cpf = '';
 
-  constructor() { }
+  modalTitle: string;
+  labelLogin: string;
+  labelClose: string;
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+    this.modalTitle = data.title;
+    this.labelLogin = data.labelLogin;
+    this.labelClose = data.labelClose;
+    console.log(data)
+  }
 
   ngOnInit() {
   }

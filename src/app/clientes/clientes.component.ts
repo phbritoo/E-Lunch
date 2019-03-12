@@ -1,6 +1,9 @@
+import { AdicionarClienteComponent } from './adicionar-cliente/adicionar-cliente.component';
 import { Component, OnInit } from '@angular/core';
 import {ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 export interface UserData {
   id: string;
@@ -30,7 +33,7 @@ export class ClientesComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
+  constructor(private breakpointObserver: BreakpointObserver, public dialog: MatDialog) {
     // Create 100 users
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
@@ -49,6 +52,28 @@ export class ClientesComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  openModal() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '480px';
+    dialogConfig.data = {
+      id: 1,
+      labelClose: "X"
+    };
+    const dialogRef = this.dialog.open(AdicionarClienteComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Dialog was closed')
+      console.log(result)
+    });
+  }
+
+  onNoClick(): void {
+    const dialogConfig = new MatDialogConfig();
+    const dialogRef = this.dialog.open(AdicionarClienteComponent, dialogConfig);
+    dialogRef.close();
   }
 }
 

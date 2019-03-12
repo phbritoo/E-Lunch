@@ -1,26 +1,20 @@
-.card-login {
+.title-modal{
+  text-align: center;
+}
+
+.btn-close{
+  float: right;
+  width: 40px;
+  height: 40px;
+  /* background-color: #c1c1c1; */
+  /* color: #fff; */
+  min-height: fit-content;
+  min-width: fit-content;
+}
+.umaLinha{
   width: 400px;
-   margin-top: 1%
 }
-/* :host {
-  display: flex;
-  min-height: 100vh;
-} */
-mat-card {
-  margin: auto;
-  text-align: center;
+.duasLinhas{
+  margin-right: 20px;
+  width: 200px;
 }
-.login-full-width {
-  width: 100%;
-}
-.example-button-row button,
-.example-button-row a {
-  margin-right: 10px;
-  margin-left: 10px;
-  text-align: center;
-}
-
-/* .example-form-field {
-  width: 00px;
-} */
-

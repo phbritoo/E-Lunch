@@ -1,9 +1,14 @@
-<mat-card-header>
+
   <mat-card-title class="card-login title"><b> Lista de Clientes </b></mat-card-title>
-</mat-card-header>
-<mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+<br><br><br><br>
+
+<mat-form-field class="filtro">
+  <input matInput (keyup)="applyFilter($event.target.value)"  placeholder="Pesquisar Cliente">
 </mat-form-field>
+
+    <button mat-icon-button color="primary" (click)="openModal()">
+      <mat-icon aria-label="Example icon-button with a heart icon">person_add</mat-icon>
+    </button>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
