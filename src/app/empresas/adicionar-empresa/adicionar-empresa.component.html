@@ -1,0 +1,109 @@
+<mat-card class="card-login">
+  <mat-card-header>
+    <mat-card-title class="card-login title"><b> Cadastro de empresas parceiras </b></mat-card-title>
+
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <table class="login-full-width" cellspacing="0">
+          <tr>
+              <td>
+                <mat-form-field class="login-full-width">
+                  <input matInput placeholder="Nome da empresa"  name="emp_nome" [(ngModel)]="nome" required>
+                  <button mat-button *ngIf="nome" matSuffix mat-icon-button aria-label="Limpar" (click)="nome=''">
+                    <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+              </td>
+            </tr>
+        <tr>
+          <td>
+            <mat-form-field class="login-full-width">
+              <input matInput placeholder="Endereço"  name="emp_loga" [(ngModel)]="endereco" required>
+              <button mat-button *ngIf="endereco" matSuffix mat-icon-button aria-label="Limpar" (click)="endereco=''">
+                <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <mat-form-field class="login-full-width">
+                <input matInput placeholder="Numero"   name="emp_numero" [(ngModel)]="numero" required>
+                <button mat-button *ngIf="numero" matSuffix mat-icon-button aria-label="Limpar" (click)="numero=''">
+                  <mat-icon>close</mat-icon>
+                  </button>
+              </mat-form-field>
+            </td>
+          </tr>
+        <tr>
+          <td>
+            <mat-form-field class="login-full-width">
+              <input matInput placeholder="CEP"   name="emp_cep" [(ngModel)]="cep" required>
+              <button mat-button *ngIf="cep" matSuffix mat-icon-button aria-label="Limpar" (click)="cep=''">
+                <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <mat-form-field class="login-full-width">
+                <input matInput placeholder="UF"   name="emp_uf" [(ngModel)]="uf" required>
+                <button mat-button *ngIf="uf" matSuffix mat-icon-button aria-label="Limpar" (click)="uf=''">
+                  <mat-icon>close</mat-icon>
+                  </button>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                <mat-form-field class="login-full-width">
+                  <input matInput placeholder="Cidade"   name="emp_cidade" [(ngModel)]="cidade" required>
+                  <button mat-button *ngIf="cidade" matSuffix mat-icon-button aria-label="Limpar" (click)="cidade=''">
+                    <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  <mat-form-field class="login-full-width">
+                    <input matInput placeholder="Bairro"   name="emp_bairro" [(ngModel)]="bairro" required>
+                    <button mat-button *ngIf="bairro" matSuffix mat-icon-button aria-label="Limpar" (click)="bairro=''">
+                      <mat-icon>close</mat-icon>
+                      </button>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                  <td>
+                    <mat-form-field class="login-full-width">
+                      <input matInput placeholder="Unidade"   name="emp_unidade" [(ngModel)]="unidade" required>
+                      <button mat-button *ngIf="unidade" matSuffix mat-icon-button aria-label="Limpar" (click)="unidade=''">
+                        <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                      <mat-form-field class="login-full-width">
+                        <input matInput placeholder="Andar"   name="emp_andar" [(ngModel)]="andar" required>
+                        <button mat-button *ngIf="andar" matSuffix mat-icon-button aria-label="Limpar" (click)="andar=''">
+                          <mat-icon>close</mat-icon>
+                          </button>
+                      </mat-form-field>
+                    </td>
+                  </tr>
+      </table>
+      <mat-card-actions class="example-button-row">
+          <button mat-raised-button color="primary">Cadastrar Empresa</button>
+          <button mat-raised-button color="basic">Voltar</button>
+        </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+
+

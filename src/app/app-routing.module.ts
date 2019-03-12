@@ -1,22 +1,22 @@
-import { ListarClientesComponent } from './listar-clientes/listar-clientes.component';
-import { ListarFuncionarioComponent } from './listar-funcionario/listar-funcionario.component';
-import { CadastroEmpresaComponent } from './cadastro-empresa/cadastro-empresa.component';
-import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
-import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
+import { AdicionarClienteComponent } from './clientes/adicionar-cliente/adicionar-cliente.component';
+import { AdicionarFuncionarioComponent } from './funcionarios/adicionar-funcionario/adicionar-funcionario.component';
+import { FuncionariosComponent } from './funcionarios/funcionarios.component';
+import { EmpresasComponent } from './empresas/empresas.component';
+import { AdicionarEmpresaComponent } from './empresas/adicionar-empresa/adicionar-empresa.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ListarEmpresaComponent } from './listar-empresa/listar-empresa.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'cadastroCliente', component: CadastroClienteComponent},
-  {path: 'cadastroFuncionario', component: CadastroFuncionarioComponent},
-  {path: 'cadastroEmpresa', component: CadastroEmpresaComponent},
-  {path: 'listarFuncionarios', component: ListarFuncionarioComponent},
-  {path: 'listarEmpresas', component: ListarEmpresaComponent},
-  {path: 'listarClientes', component: ListarClientesComponent}
+  {path: 'cadastroCliente', component: AdicionarClienteComponent},
+  {path: 'cadastroFuncionario', component: AdicionarFuncionarioComponent},
+  {path: 'cadastroEmpresa', component: AdicionarEmpresaComponent},
+  {path: 'listarFuncionarios', component: FuncionariosComponent},
+  {path: 'listarEmpresas', component: EmpresasComponent},
+  {path: 'listarClientes', component: ClientesComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

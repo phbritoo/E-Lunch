@@ -1,4 +1,4 @@
-<!-- Menu que está na pasta "header" e dentro tem a pasta "barra-lateral" -->
+<!-- Menu que está na pasta "menu" e dentro tem a pasta "barra-lateral" -->
 
 <mat-sidenav-container>
     <mat-sidenav #sidenav role="navigation">
@@ -6,7 +6,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+        <app-menu (sidenavToggle)="sidenav.toggle()"></app-menu>
         <main>
           <router-outlet></router-outlet>
         </main>
